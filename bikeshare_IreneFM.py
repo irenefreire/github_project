@@ -197,6 +197,14 @@ def user_stats(df):
     print("\nThis took %s seconds to calculate." % (time.time() - start_time))
     print('-'*40)
 
+def raw_data(df):
+    while True:
+        print('\nHere is a sample of the raw data:')
+        print(df.sample(5))
+        view_more = input("Do you want to see more raw data? Type 'yes' to see more:\n")
+        if view_more != "yes":
+            break
+
 
 def main():
     while True:
@@ -207,6 +215,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+        raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
@@ -214,4 +223,4 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+    main()
