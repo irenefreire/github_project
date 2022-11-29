@@ -20,12 +20,12 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = ''
     while city.lower().strip() not in ['chicago','new york city','washington']:
-        city = input('\nEnter the city that you are interested in from Chicago, \nNew York City and Washington:\n')
+        city = input('\n\nEnter the city that you are interested in from Chicago, \nNew York City and Washington:\n')
 
     # get user input for month (all, january, february, ... , june)
     month = ''
     while month.lower().strip() not in ['january', 'february', 'march', 'april', 'may', 'june','all']:
-        month = input('\nEnter the month from Jan-Jun for which you would \nlike to see data, or just type "all" to see all \navailable data:\n')
+        month = input('\n\nEnter the month from Jan-Jun for which you would \nlike to see data, or just type "all" to see all \navailable data:\n')
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = ''
